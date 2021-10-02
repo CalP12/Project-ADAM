@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href=".\css\style.css">
+<link rel="stylesheet" href=".\css\crt.css">
+<body>
+<head>
+    <title>Adam's P.O.V</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+
+<div class="splash">
+    <div style="margin-top:15%">
+    <h1 class="font" style="font-size: 40px;">Booting up Adam...<span class="blinking-cursor" style="font-size: 50px;">_</span></h1>
+    <div id="progress">
+        <div id="loading">10%</div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="crt site-title">
+<h6>Initializing Adam's P.O.V v0.1 Copyright (c) 2021 Anonymous </h6>
+<div class="titlescreen">
+    <pre>
+    .........................................................................................................
+
+            $$$$$$\        $$\                       $$\               $$$$$$$\   $$$$$$\  $$\    $$\
+            $$  __$$\       $$ |                      $  |              $$  __$$\ $$  __$$\ $$ |   $$ |
+            $$ /  $$ | $$$$$$$ | $$$$$$\  $$$$$$\$$$$\\_/$$$$$$$\       $$ |  $$ |$$ /  $$ |$$ |   $$ |
+            $$$$$$$$ |$$  __$$ | \____$$\ $$  _$$  _$$\ $$  _____|      $$$$$$$  |$$ |  $$ |\$$\  $$  |
+            $$  __$$ |$$ /  $$ | $$$$$$$ |$$ / $$ / $$ |\$$$$$$\        $$  ____/ $$ |  $$ | \$$\$$  /
+            $$ |  $$ |$$ |  $$ |$$  __$$ |$$ | $$ | $$ | \____$$\       $$ |      $$ |  $$ |  \$$$  /
+            $$ |  $$ |\$$$$$$$ |\$$$$$$$ |$$ | $$ | $$ |$$$$$$$  |      $$ |$$\    $$$$$$  |$$\\$  /
+            \__|  \__| \_______| \_______|\__| \__| \__|\_______/       \__|\__|   \______/ \__|\_/
+
+    ----------------------------------------------------------------------------------------------------------
+    </pre>
+</div>
+
+<h4 class="welcome">"Hello there, My name is Adam, come have a front row seat and watch my odyssey unfold!"</h4>
+<div class="center">
+    <span class="normal">></span><a href="about_adam.html" class="entrybutton">Know more about me<span class="blinking-cursor">_</span></a><br>
+    <span class="normal">></span><a href="collection.html" class="entrybutton">View Collection<span class="blinking-cursor">_</span></a>
+</div>
+<div class="piece scanlines noclick"></div>
+<div class="piece glow noclick"></div>
+</div>
+<script>
+        window.onload = function() {
+        progressbar();
+    }
+    const splash = document.querySelector(".splash");
+    document.addEventListener('DOMContentLoaded',(e) =>{
+        setTimeout(()=>{
+            splash.classList.add('display-none');
+        },3000);
+    })
+
+    function progressbar() {
+        var i =0
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("loading");
+            var width = 10;
+            var id = setInterval(frame, 20);
+            function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width  + "%";
+            }
+            }
+        }
+        }
+
+</script>
+</body>
+</html>

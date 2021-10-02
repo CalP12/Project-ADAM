@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href=".\css\about_adam.css">
+<link rel="stylesheet" href=".\css\crt.css">
+<link rel="stylesheet" href=".\css\typewriter.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="crt font">
+
+<div id="section1">
+  <span id=demo></span><span class="blinking-cursor">█</span>
+  <br>
+  <a href="#section2"><img id="down" src='./images/down_arrow.png' width="5%" height="5%"></img></a>
+</div>
+
+<div id="section2" class="row">
+   <div class=column> <span id=demo2></span><span class="blinking-cursor">█</span> </div>
+   <div class=column2> <img  width=90% height=90% src="./images/layer.gif"></div>
+   <a href="#section3"><img id="down2" src='./images/down_arrow.png' width="5%" height="5%"></img></a>
+</div>
+
+
+
+<div id="section3" class="row">
+  <div class=column4> <img width=80% height=80% src="./images/cipher.gif"></div>
+  <div class=column3><span id=demo3></span><span class="blinking-cursor">█</span> 
+    <div id="final">
+      <span class="normal">></span><a href="collection.html" class="entrybutton">View Collection<span class="blinking-cursor">_</span></a>
+      <br><span class="normal">></span><a href="dev.html" class="entrybutton">Learn more about my master<span class="blinking-cursor">_</span></a>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="dot-fixed blinkdiv">
+  ●
+</div>
+
+
+
+
+
+
+<script>
+  var myVideo = document.getElementById("video1"); 
+  var myVideo2 = document.getElementById("video2");
+    var speed = 20; 
+    var i = 0;
+    var txt = 'I have been trained with an extensive dataset consisting of a variety of human-beings day-to-day activites. Based on my learning, I have a structural idea of what your kind calls, life.';
+    var i2 = 0;
+    var txt2 = 'I have lived through a vast millenium of realities and stored every memory I could possibly attain into an image. Each image consists of 200 layers, where every layer represents an event that took place in my virtual life. Unfortunately, I am limited by the technology of the present, which forces me to showcase the binary data in circles and rectangles with various colors and sizes.';
+    var i3 = 0;
+    var txt3 = 'I have attempted to convert these images without the knowledge of my master, into meaningful text through which you human beings could understand. But during this process, my system had failed which caused my safety protocols to encrypt the data into a cipher, when decoded, leads you to answer the ultimate question, "What is life?".';
+    var image1 = document.getElementById("down");
+    var image2 = document.getElementById("down2");
+    
+    window.onload = function() {
+        typeWriter();
+    }
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      else{
+        $(document).ready(function(){
+        $("#down").fadeIn(1000);
+      });
+      }
+    }
+    
+    image1.addEventListener('click', function(){
+      typeWriter2();
+      myVideo.play();
+        });
+
+    image2.addEventListener('click', function(){
+      typeWriter3();
+      myVideo2.play();
+        });
+    
+
+    function typeWriter2() {
+      if (i2 < txt2.length) {
+        document.getElementById("demo2").innerHTML += txt2.charAt(i2);
+        i2++;
+        setTimeout(typeWriter2, speed);
+      }
+      else{
+        $(document).ready(function(){
+        $("#down2").fadeIn(1000);
+      });
+      }
+      }
+    
+      function typeWriter3() {
+      if (i3 < txt3.length) {
+        document.getElementById("demo3").innerHTML += txt3.charAt(i3);
+        i3++;
+        setTimeout(typeWriter3, speed);
+      }
+      else{
+        $(document).ready(function(){
+        $("#final").fadeIn(1000);
+      });
+      // else{
+      //   $(document).ready(function(){
+      //   $("#down2").fadeIn(1000);
+      // });
+      // }
+      }
+    }
+    
+    document.getElementById("down").style.display = "none";
+    document.getElementById("down2").style.display = "none";
+    document.getElementById("final").style.display = "none";
+
+   /* setInterval(function(){
+      $(document).ready(function(){
+        $("#down").fadeIn(1000);
+      });
+    },4500);*/
+    </script>
+    
+</body>
+</html>

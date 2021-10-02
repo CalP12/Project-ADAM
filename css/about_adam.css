@@ -1,0 +1,211 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#down{
+    display:block;
+    object-fit: contain;
+    margin-top:50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #down2{
+    display:block;
+    object-fit: contain;
+    margin-right: auto;
+    margin-top:20px;
+    margin-left: auto;
+    z-index: -2;
+  }
+
+  #section1 {
+    margin-top:60px;
+    margin-left: 18%;
+    height: 600px;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    /*font-size: 3rem;*/
+  }
+#section2 {
+  height: 600px;
+  float:left;
+}
+#section3 {
+  height: 600px;
+  float:right;
+  margin-top: 70px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding-left:50px;
+  padding-top:30px;
+}
+.column3 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.column4 {
+  float: left;
+  width: 50%;
+  margin-top:30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.font{
+    font-family:'VT323';
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 2.5vw;
+  color: greenyellow;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    color: white;
+  }
+  50% {
+    color:greenyellow;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: greenyellow;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: greenyellow;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: greenyellow;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: greenyellow;
+  }
+}
+@-webkit-keyframes blackWhite {  
+  0% { color: red; }
+  20% { color: yellow; }
+  40% { color: blue; }
+  65% { color: purple;}
+  80% { color: orange;}
+  100% { color: greenyellow;}
+}
+
+.blinkdiv {
+    color: greenyellow;
+    -webkit-animation-name: blackWhite;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 2s; 
+}   
+.dot-fixed{
+  font-size:4vw;
+  position:fixed;
+  bottom:0;
+  left:10px;
+} 
+.normal{color: #adff2f;font-family: Arial, Helvetica, sans-serif;padding-right: 10px;font-size:26px}
+
+a{color:greenyellow;text-align: center;font-family:'VT323';font-weight: 300; font-size:26px;text-decoration: none;}
+a:hover{background-color: greenyellow;color: black; border-radius: 5px;}
+
+@media only screen and (min-height: 900px) {
+  #section1 {
+    margin-top:60px;
+    margin-left: 18%;
+    height: 1000px;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    /*font-size: 3rem;*/
+  }
+#section2 {
+  height: 1000px;
+  float:left;
+  font-size: 3.5rem;
+}
+#section3 {
+  height: 1000px;
+  float:right;
+  margin-top: 70px;
+  font-size: 3.5rem;
+}
+.font{
+  font-family:'VT323';
+  font-weight: 300;
+  font-size: 4rem;
+}
+.entrybutton{
+  font-size: 3rem;
+}
+}

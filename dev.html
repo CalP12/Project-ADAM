@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href=".\css\dev.css">
+<body>
+<head>
+    <title>Adam's P.O.V</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<div class="crt">
+<div class="splash">
+    <img src = "./images/skull.gif" >
+    <div>
+        <span class="normal">></span><span class="font" style="font-size: 40px;color:red;" id="demo"></span>
+    </div>
+    
+    <span class="normal">></span><span class="font" style="font-size: 23px;color:red;" id="demo2"></span>
+    <br><span class="normal">></span><span class="font" style="font-size: 23px;color:red;" id="demo3"></span><span class="blinking-cursor" style="font-size: 30px;color:red;">_</span>
+</div>
+</div>
+
+<script>
+    var speed = 20; 
+    var i = 0;
+    var txt = 'System Failure!';
+    var i2 = 0;
+    var txt2 = 'error (403) Unauthorized Access! You do not have permission to access this page!';
+    var i3 = 0;
+    var txt3 = 'Rebooting Adam...';
+
+
+    window.onload = function() {
+        typeWriter();
+    }
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      else{
+        typeWriter2();
+      };
+    }
+    
+    function typeWriter2() {
+      if (i2 < txt2.length) {
+        document.getElementById("demo2").innerHTML += txt2.charAt(i2);
+        i2++;
+        setTimeout(typeWriter2, 5);
+      }
+      else{
+        typeWriter3();
+      }
+    }
+
+    function typeWriter3() {
+      if (i3 < txt3.length) {
+        document.getElementById("demo3").innerHTML += txt3.charAt(i3);
+        i3++;
+        setTimeout(typeWriter3, 60);
+      }
+      else{
+        setTimeout(function() {
+            window.location.href = "index.html";
+            }, 3000);
+        
+      }
+    }
+    
+
+</script>
+</body>
+</html>

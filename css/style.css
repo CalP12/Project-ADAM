@@ -1,0 +1,128 @@
+pre{ font-size:20px; display:inline-block;text-align:left;}
+.center{text-align: center; display: block;padding-top:20px;}
+.center2{display: block; padding-bottom:120px;}
+.titlescreen{text-align: center;padding-top:10px;}
+.welcome{background-color: greenyellow; color: black; text-align:center;font-size:34.6px;font-family:'VT323';font-weight: 300;}
+h6{text-align: center;}
+.normal{color: #adff2f;font-family: Arial, Helvetica, sans-serif;padding-right: 10px;font-size:26px}
+a{color:greenyellow;text-align: center;font-family:'VT323';font-weight: 300; font-size:26px;text-decoration: none;}
+a:hover{background-color: greenyellow;color: black; border-radius: 5px;}
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: greenyellow;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      color: white;
+    }
+    50% {
+      color:greenyellow;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: greenyellow;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: greenyellow;
+    }
+  }
+  
+  @-ms-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: greenyellow;
+    }
+  }
+  
+  @-o-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: greenyellow;
+    }
+  }
+  
+.splash{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:black;
+  z-index:200;
+  color: white;
+  text-align:center;
+  line-height: 15vh;
+  color: greenyellow;
+}
+
+.splash.display-none{
+  position:fixed;
+  opacity:0;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:black;
+  z-index:-10;
+  color: white;
+  text-align:center;
+  line-height: 90vh;
+  color: greenyellow;
+  transition: all 0.5s;
+}
+
+#progress {
+  margin-left: 25%;
+  text-align: center;
+  border: 2px solid greenyellow;
+  width:50%;
+}
+
+#loading {
+  width: 10%;
+  height: 30px;
+  background-color: greenyellow;
+  text-align: center; 
+  line-height: 30px;
+  color: black;
+}
+
+.font{
+  font-family:'VT323';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {  /* -- If the view port is less than 350px wide (portrait on phone) then display the following styles -- */
+  .mobile{
+      display: block !important;
+      height: 300px;
+      width: 300px;
+      background: greenyellow;
+      color: black;
+  }
+  }
+  .mobile{
+    display: none;   
+   }
